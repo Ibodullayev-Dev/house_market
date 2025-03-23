@@ -17,7 +17,7 @@ export class LoginAuthDto {
 	@IsNotEmpty()
 	@IsString()
 	@Length(4, 8, { message: "Password must be at least 4 characters and at most 8 characters." })
-	@Matches(/^(?=.*[A-Z])(?=.*[a-z])(?=(?:.*\d){3,})[A-Za-z\d]{6,8}$/, {
+	@Matches(/^(?=.*[A-Z])(?=.*[a-z])(?=(?:.*\d){3,})[A-Za-z\d]{4,8}$/, {
 		message: "Parol kamida 1 ta katta harf, 1 ta kichik harf va 3 ta raqamdan iborat bo‘lishi kerak (maxsus belgilar kiritilmasin)"
 	})
 	password: string;
